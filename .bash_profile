@@ -23,12 +23,15 @@ light_yellow="\e[93m"
 light_blue="\e[94m"
 light_red="\e[91m"
 
-# Change terminal format to: user@computer_name:absolute_path
+# Change terminal format to: user@computer_name:absolute_path (git_branch_name)
 PS1="\[$light_green\]\u\[$reset\]@"
 PS1+="\[$cyan\]\h\[$reset\]:"
-PS1+="\[$light_yellow\]\w\e[$reset\]"
+PS1+="\[$light_yellow\]\w\[$reset\]"
 PS1+="\[$light_blue\]\$(active_git_branch)\[$reset\] \n"
 PS1+="\[$light_red\]$\[$reset\] "
 PS2="\[$light_red\]>\[$reset\] "
 export PS1
 export PS2
+
+# Expose JDK
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home/
